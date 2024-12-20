@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdade ou Desafio +18</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+
+        <h1>Verdade ou Desafio <span class="age-warning">+18</span></h1>
+
+        <!-- Tela de Setup -->
+        <div id="setup-screen">
+            <div class="game-info">
+                <p>O clássico jogo de verdade ou desafio com uma pitada extra de ousadia!</p>
+                <p><i class="fas fa-info-circle"></i> Adicione os nomes dos jogadores e comece a diversão</p>
+            </div>
+            <div class="setup-controls">
+                <div class="players-list" id="players-list">
+                    <div class="player-input">
+                        <input type="text" placeholder="Nome do Jogador 1" class="player-name">
+                        <button class="remove-player" title="Remover jogador">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="player-input">
+                        <input type="text" placeholder="Nome do Jogador 2" class="player-name">
+                        <button class="remove-player" title="Remover jogador">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <button id="add-player" class="secondary-button">
+                    <i class="fas fa-plus"></i> Adicionar Jogador
+                </button>
+                <button id="start-game" class="primary-button">
+                    <i class="fas fa-play"></i> Iniciar Jogo
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div id="game-screen" class="hidden">
+            <div class="game-status">
+                <div class="current-players">
+                    <div class="asking-player"></div>
+                    <i class="fas fa-arrow-right"></i>
+                    <div class="answering-player"></div>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="bottle-container">
+                    <div class="bottle" id="bottle">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                </div>
+                <button id="spin-bottle" class="primary-button">
+                    <i class="fas fa-sync-alt"></i> Girar Garrafa
+                </button>
+            </div>
+
+            <div class="game-controls">
+                <div class="choice-buttons hidden" id="choice-buttons">
+                    <button class="truth-button" id="truth-button">
+                        <i class="fas fa-comment"></i> Verdade
+                    </button>
+                    <button class="dare-button" id="dare-button">
+                        <i class="fas fa-fire"></i> Desafio
+                    </button>
+                </div>
+
+                <div class="challenge-display hidden" id="challenge-display">
+                    <div class="challenge-text"></div>
+                    <button class="primary-button" id="next-turn">
+                        <i class="fas fa-arrow-right"></i> Próxima Rodada
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Atenção: Este jogo contém perguntas e desafios com conteúdo adulto!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

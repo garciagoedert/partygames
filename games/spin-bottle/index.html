@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gire a Garrafa - Party Game +18</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+        <h1>Gire a Garrafa <i class="fas fa-wine-bottle"></i></h1>
+        
+        <div class="game-container">
+            <div class="bottle-container">
+                <div id="bottle" class="bottle">
+                    <i class="fas fa-wine-bottle"></i>
+                </div>
+            </div>
+
+            <div class="players-container">
+                <div class="player-setup">
+                    <label for="numPlayers">Número de Jogadores:</label>
+                    <input type="number" id="numPlayers" min="2" max="10" value="2" aria-label="Número de jogadores">
+                    <button id="setupPlayers">Configurar Jogadores</button>
+                </div>
+                <div id="playersList" class="players-list"></div>
+            </div>
+
+            <div class="action-display">
+                <div id="selectedPlayers" class="selected-players"></div>
+                <div id="action" class="action">Clique em "Girar" para começar!</div>
+            </div>
+
+            <div class="controls">
+                <button id="spinBottle" class="primary-button">
+                    <i class="fas fa-sync-alt"></i> Girar
+                </button>
+                <button id="resetGame" class="secondary-button">
+                    <i class="fas fa-redo"></i> Recomeçar
+                </button>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h3><i class="fas fa-info-circle"></i> Como Jogar</h3>
+            <ul>
+                <li>Configure o número de jogadores (mínimo 2)</li>
+                <li>Clique em "Girar" para rodar a garrafa</li>
+                <li>A garrafa selecionará dois jogadores</li>
+                <li>Uma ação picante será sorteada</li>
+                <li>Os jogadores devem realizar a ação ou pagar prenda</li>
+                <li>Seja criativo e divirta-se! 🔥</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Atenção: Este jogo contém conteúdo adulto e pode não ser apropriado para todos os públicos.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

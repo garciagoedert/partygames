@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem é Mais Provável - Party Game +18</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+        <h1>Quem é Mais Provável <i class="fas fa-people-arrows"></i></h1>
+        
+        <div class="game-container">
+            <div class="question-container">
+                <h2>Quem é mais provável de...</h2>
+                <p id="question" class="question">Clique em "Próxima" para começar!</p>
+            </div>
+
+            <div class="players-container">
+                <div class="player-setup">
+                    <label for="numPlayers">Número de Jogadores:</label>
+                    <input type="number" id="numPlayers" min="3" max="10" value="3" aria-label="Número de jogadores">
+                    <button id="setupPlayers">Configurar Jogadores</button>
+                </div>
+                <div id="playersList" class="players-list"></div>
+            </div>
+
+            <div class="controls">
+                <button id="nextQuestion" class="primary-button">
+                    <i class="fas fa-forward"></i> Próxima
+                </button>
+                <button id="resetGame" class="secondary-button">
+                    <i class="fas fa-redo"></i> Recomeçar
+                </button>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h3><i class="fas fa-info-circle"></i> Como Jogar</h3>
+            <ul>
+                <li>Configure o número de jogadores (mínimo 3)</li>
+                <li>Uma pergunta picante aparecerá na tela</li>
+                <li>Todos apontam para quem acham mais provável de fazer a ação</li>
+                <li>Quem receber mais votos bebe ou marca pontos</li>
+                <li>Seja honesto e divirta-se! 🍷</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Atenção: Este jogo contém conteúdo adulto e pode não ser apropriado para todos os públicos.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

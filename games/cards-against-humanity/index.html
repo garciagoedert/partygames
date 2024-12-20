@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Against Humanity BR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+
+        <h1>Cards Against Humanity <i class="fas fa-skull"></i></h1>
+
+        <!-- Tela de Setup -->
+        <div id="setup-screen">
+            <div class="game-info">
+                <p>O jogo de cartas mais politicamente incorreto do mundo!</p>
+                <p><i class="fas fa-info-circle"></i> Cada jogador escolhe uma carta branca para responder à carta preta</p>
+            </div>
+            <div class="setup-controls">
+                <div class="input-group">
+                    <label for="num-players">Número de Jogadores:</label>
+                    <input type="number" id="num-players" min="3" max="8" value="3">
+                </div>
+                <div class="input-group">
+                    <label for="points-to-win">Pontos para Vencer:</label>
+                    <input type="number" id="points-to-win" min="3" max="10" value="5">
+                </div>
+                <button id="start-game" class="primary-button">
+                    <i class="fas fa-play"></i> Iniciar Jogo
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div id="game-screen" class="hidden">
+            <div class="game-status">
+                <div class="round-info">Rodada <span id="current-round">1</span></div>
+                <div class="current-player"></div>
+            </div>
+
+            <div class="scoreboard-container">
+                <h3><i class="fas fa-trophy"></i> Placar</h3>
+                <div class="scoreboard"></div>
+            </div>
+
+            <div id="game-board">
+                <div class="black-card-container">
+                    <h3>Carta da Rodada</h3>
+                    <div id="black-card"></div>
+                </div>
+
+            <div class="white-cards-section">
+                <h3><i class="fas fa-hand-paper"></i> Suas Cartas</h3>
+                <div class="white-cards-container">
+                    <div id="white-cards"></div>
+                </div>
+            </div>
+
+            <div class="played-cards-section">
+                <div id="played-cards" class="hidden">
+                    <h3><i class="fas fa-layer-group"></i> Cartas Jogadas</h3>
+                    <div class="played-cards-grid"></div>
+                </div>
+            </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="confirm-card" class="primary-button hidden">
+                    <i class="fas fa-check"></i> Confirmar Carta
+                </button>
+                <button id="select-winner" class="primary-button hidden">
+                    <i class="fas fa-crown"></i> Escolher Vencedor
+                </button>
+                <button id="next-round" class="primary-button hidden">
+                    <i class="fas fa-arrow-right"></i> Próxima Rodada
+                </button>
+            </div>
+        </div>
+
+        <!-- Histórico -->
+        <div id="game-history" class="hidden">
+            <h3><i class="fas fa-history"></i> Últimas Jogadas</h3>
+            <div class="history-list"></div>
+        </div>
+
+        <div class="footer">
+            <p><i class="fas fa-exclamation-triangle"></i> Aviso: Este jogo contém conteúdo adulto e humor negro!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
